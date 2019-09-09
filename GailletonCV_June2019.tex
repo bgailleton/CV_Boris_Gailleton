@@ -1,0 +1,233 @@
+%-----------------------------------------------------
+% Simon M. Mudd CV
+%
+% This CV is loosely based on the template produced by
+% Dario Taraborelli
+% URL: http://nitens.org/taraborelli/cvtex
+%
+% NOTE: This gives a load of error messages but in the end produces 
+% a pdf of the cv, so I just ignore all the errors. 
+%
+%----------------------------------------------------
+
+%!TEX TS-program = xelatex
+%!TEX encoding = UTF-8 Unicode
+
+\documentclass[10pt, a4paper]{article}
+\usepackage{fontspec} 
+\usepackage{eurosym}
+% DOCUMENT LAYOUT
+\usepackage{geometry} 
+\geometry{a4paper, textwidth=5.75in, textheight=9.5in, marginparsep=7pt, marginparwidth=.6in}
+\setlength\parindent{0in}
+
+% FONTS
+\usepackage{xunicode}
+\usepackage{xltxtra}
+\defaultfontfeatures{Mapping=tex-text} % converts LaTeX specials (``quotes'' --- dashes etc.) to unicode
+%For gentium, you should install the font from here: http://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&item_id=Gentium_basic
+%\setromanfont [Ligatures={Common}, BoldFont={Gentium Basic Bold}, ItalicFont={Gentium Basic Italic}]{Gentium Basic}
+
+%For fontin font, you should install the font from here: http://www.exljbris.com/fontin.html
+%\setromanfont [Ligatures={Common}, BoldFont={Fontin Bold}, ItalicFont={Fontin Italic}]{Fontin}
+
+%For linux libertine font, you should install from fontsquirrel, http://www.fontsquirrel.com/
+% This one seems to be happiest! Least bad boxes. And looks nice
+%\setromanfont [Ligatures={Common}, BoldFont={Linux Libertine Bold}, ItalicFont={Linux Libertine Italic}]{Linux Libertine}
+
+%For Liberation Serif font, you should install from fontsquirrel, http://www.fontsquirrel.com/
+%\setromanfont [Ligatures={Common}, BoldFont={Liberation Serif Bold}, ItalicFont={Liberation Serif Italic}]{Liberation Serif}
+
+%For Heuristica Serif font, you should install from fontsquirrel, http://www.fontsquirrel.com/
+% This one also seems to make XeLaTeX happy
+\setromanfont [Ligatures={Common}, BoldFont={Heuristica Bold}, ItalicFont={Heuristica Italic}]{Heuristica}
+
+%\setmonofont[Scale=0.8]{Monaco}
+
+%You can download fontawsome here: http://fontawesome.io/
+% once you unzip it you will need to go into the folder and install the fonts
+\usepackage{fontawesome}
+
+% ---- CUSTOM COMMANDS
+\chardef\&="E050
+\newcommand{\html}[1]{\href{#1}{\scriptsize\textsc{[html]}}}
+\newcommand{\pdf}[1]{\href{#1}{\scriptsize\textsc{[pdf]}}}
+\newcommand{\doi}[1]{\href{#1}{\scriptsize\textsc{[doi]}}}
+
+
+% ---- MARGIN YEARS
+\usepackage{marginnote}
+\newcommand{\amper{}}{\chardef\amper="E0BD }
+\newcommand{\years}[1]{\marginnote{\scriptsize #1}}
+\renewcommand*{\raggedleftmarginnote}{}
+\setlength{\marginparsep}{7pt}
+\reversemarginpar
+
+% HEADINGS
+\usepackage{sectsty} 
+\usepackage[normalem]{ulem} 
+\sectionfont{\mdseries\upshape\Large}
+\subsectionfont{\mdseries\scshape\normalsize} 
+\subsubsectionfont{\mdseries\upshape\large} 
+
+%columns
+\usepackage{multicol}
+\setlength{\columnsep}{10pt}
+%\def\columnseprulecolor{\color{White}}
+
+% PDF SETUP
+% ---- FILL IN HERE THE DOC TITLE AND AUTHOR
+\usepackage[bookmarks, colorlinks, breaklinks, 
+% ---- FILL IN HERE THE TITLE AND AUTHOR
+	pdftitle={Boris Gailleton - vita},
+	pdfauthor={Boris Gailleton},
+]{hyperref}  
+\hypersetup{linkcolor=blue,citecolor=blue,filecolor=black,urlcolor=blue} 
+
+%Colours
+\usepackage[usenames,dvipsnames]{xcolor}
+\definecolor{Gray}{rgb}{0.3,0.3,0.3}
+\definecolor{LightGray}{rgb}{0.6,0.6,0.6}
+
+% Header and footer
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{\textcolor{LightGray}{Boris Gailleton CV, July, 2019}}
+\renewcommand{\footrulewidth}{1pt}
+\rfoot{\textcolor{LightGray}{Page \thepage}}
+
+%urls
+\usepackage{url}
+
+% DOCUMENT
+\begin{document}
+{\LARGE Boris Gailleton}\\
+\textcolor{Gray}{\large{Early Stage Researcher in Earth Surface Processes}}\\[0.2cm]
+
+\begin{multicols}{2}
+University of Edinburgh\\
+School of GeoSciences\\
+Drummond Street\\
+Edinburgh, EH8 9XP\\
+United Kingdom
+
+\columnbreak
+
+Phone: \texttt{+44~(0)756~395~3339}\\
+% Fax: \texttt{+44~(0)131~650~2524}\\
+email: \href{mailto:b.gailleton@sms.ed.ac.uk}{b.gailleton@sms.ed.ac.uk}\\
+Google Scholar: \href{https://scholar.google.co.uk/citations?user=r5HIc00AAAAJ&hl=en}{Boris Gailleton}\\ 
+Github: \href{https://github.com/bgailleton}{bgailleton}\\
+ORCID: \href{https://orcid.org/0000-0001-6518-4304}{ORCID 0000-0001-6518-4304}\\
+
+\end{multicols}
+
+\hrule
+\section*{Appointments}
+\noindent
+\years{2016 - now}\textbf{Early Stage Researcher} in \textit{Atmospheric and Environmental Sciences: School of GeoSciences}, University of Edinburgh, UK\\[0.05cm]
+\years{2019}\textbf{Research Software Engineer} in \textit{Landslide Dynamics} (3 months): School of GeoSciences, University of Edinburgh, UK\\[0.05cm]
+\years{2015}\textbf{Research Engineer} in \textit{Ore deposit characterisation}: ArcelorMittal Research Mining Centre, Maizière-lès-Metz, France \\[0.05cm]
+
+
+\hrule
+\section*{Education}
+\noindent
+\years{2016 - now}\textbf{PhD} in \textit{Atmospheric and Environmental Sciences}, School of GeoSciences, University of Edinburgh, UK\\[0.05cm]
+\years{2015}\textbf{MA} in \textit{Mining Geology}, UniLaSalle, Beauvais, France - Laurentian University, Sudbury, ON, Canada\\[0.05cm]
+\years{2013}\textbf{BA} in \textit{Geology}, UniLaSalle (former LaSalle Beauvais), Beauvais, France\\[0.05cm]
+
+\hrule
+\section*{Awards}
+\noindent
+\years{2017}\textbf{Best Poster Award}, Geosciences Gradschool Conference, University of Edinburgh\\[0.05cm]
+\years{2015}\textbf{Graduation with Honors}, Awarded by the graduation committee of UniLaSalle\\[0.05cm]
+
+\hrule
+\section*{Funding}
+\noindent
+\years{2016 - 2020}European Union initial training grant 674899 - Horizon 2020 -  (\href{http://www.subitop.eu}{SUBITOP})\\ Funding Agency: \textit{ERC}\\Award: \textbf{54,000}\euro \textit{(research budget)} \\[0.05cm] P.I. Niels Holvius, Hugh D. Sinclair, Simon M. Mudd\\[0.05cm]
+
+\hrule
+\section*{Service}
+\years{2019}\textbf{Conference Co-Organiser}, (\href{http://topoeurope2019.eu/}{TopoEurope conference}, part of SUBITOP ITN)\\[0.05cm]
+\years{2019}\textbf{Co-Convener}, EGU general assembly: GM12.2/HS12.11/NH10.7/SSS13.39 Making high resolution topographic analysis more reproducible with LSDTopoTools\\[0.05cm]
+\years{2018}\textbf{Journal Peer Reviewer}: Journal of Geophysical Research: Earth Surface; Geomorphology\\[0.05cm]
+\years{2016 - 2017}\textbf{Hutton Club Seminar Series Convener}: University of Edinburgh\\[0.05cm]
+
+\hrule
+\section*{Invited Talks}
+\years{2018}\textbf{Freie Universit\"at Seminar Series, Berlin, Germany}, Invited talk to the Sedimentary System Research Group\\[0.05cm]
+
+\hrule
+\section*{Demonstrating/Tutoring activities}
+\years{2018}Eroding Landscapes - Field demonstrator (2 days) (4th year Undergraduates)\\[0.05cm]
+\years{2018}Technological Infrastructures for GIS (Master course) - Demonstrator\\[0.05cm]
+\years{2017--2018}Geomorphology (2nd year Undergraduates), Tutoring (24 Hours), with Anthony Newton.
+\years{2017}Global Tectonics and the Rock Cycle (Field trip) (1st year Undergraduates) - Demonstrating (2 days) \\[0.05cm]
+\years{2017}Global Tectonics and the Rock Cycle (1st year Undergraduates) - Demonstrating (24 hours) \\[0.05cm]
+\years{2015}Paleontology (1st year Undergraduates) - Demonstrating (8 hours) \\[0.05cm]
+\years{2014}Phase Diagram in magmas - Igneous Petrology (3rd year Undergraduates), Demonstrating (12 hours)\\[0.05cm]
+\years{2014}Field Igneous Geology - Field Demonstrator - 2 weeks, La Bourboule area, Massif Central, France (2nd year Undergraduates) \\[0.05cm]
+
+\hrule
+\section*{Software}
+Most of my software contributions to research have been published and released within \href{https://lsdtopotools.github.io/}{LSDTopoTools Research software} and to lesser extent on my \href{https://github.com/bgailleton}{Personal Github}.
+\subsection*{Published}
+
+\years{Github}The LSDTopoTools software package for topographic analysis has a number of repositories located on the \href{https://github.com/LSDtopotools}{Github LSDTopoTools page}, Lead Developer: Simon M. Mudd\par
+
+\years{Zenodo}The LSDTopotools development team has released a number of packages via Zenodo within the \href{https://zenodo.org/search?page=1&size=20&q=lsdtopotools}{LSDTopoTools software package,}\par
+
+Mudd, S. M., Clubb, F. J., Grieve, S. W. D., Milodowski, D. T., Hurst, M. D., Gailleton, B., and Valters, D. A. (2019, June 13). LSDTopoTools2 (Version v0.02). Zenodo.\\ \href{http://doi.org/10.5281/zenodo.3245041}{http://doi.org/10.5281/zenodo.3245041} \textit{Contribution: General contributions to the tools, DEM preprocessing algorithm, knickpoint detection algorithm, chi tools, drainage divide characterisation algorithms, testing.}\par
+
+Mudd, S. M., Clubb, F. J., Gailleton, B., Grieve, S. W. D., Valters, D. A., and Hurst, M. D. (2019, February 8). LSDTopoTools Documentation (Version v2.0). \textit{Zenodo}.\\ \href{http://doi.org/10.5281/zenodo.2560224}{http://doi.org/10.5281/zenodo.2560224} \textit{Contribution: Knickpoint algorithm documentation, some sections about the chi tools.}\par
+
+Mudd, S. M., Clubb, F. J., Gailleton, B., Valters, D. A., Hurst, M. D., and Grieve, S. W. D. (2019, February 8). LSDMappingTools (Version v0.1). \textit{Zenodo}.\\ \href{http://doi.org/10.5281/zenodo.2560166}{http://doi.org/10.5281/zenodo.2560166} \textit{Contribution: General contributions to the plotting and I/O routines.}\par 
+
+Mudd, S. M., Clubb, F. J., Gailleton, B., Hurst, M. D., Milodowski, D. T., and Valters, D. A. (2018, June 18). The LSDTopoTools Chi Mapping Package (Version 1.11). \textit{Zenodo}.\\ \href{http://doi.org/10.5281/zenodo.1291889}{http://doi.org/10.5281/zenodo.1291889} \textit{Contribution: General contributions to the chi tools.}\par
+
+\subsection*{In preparation}
+
+\years{In preparation} I am developing two main packages focused on topographic analysis and Landscape Evolution Models, both designed to combine the flexibility and approachability of python with the computational efficiency  of C++. They can be accessed on demand before their release with associated publications.\par
+
+Gailleton, B., Mudd, S. M., , Graf E.L.S. (in prep.). Carpythians, a lightweight python - C++ Landscape Evolution Model.\par
+
+Gailleton, B., Mudd, S. M., Clubb, F. J., Valters, D. A., Hurst, M. D., Grieve, S. W. D., Milodowski, D. T. and , Graf E.L.S. (in prep.). lsdtopytools, a python wrapper, high-level interface and automator for LSDTopoTools.\par
+
+
+\hrule
+\section*{Publications}
+
+\subsection*{Published}
+
+\years{2019}\hangindent=0.7cm Gailleton, B., Mudd, S. M., Clubb, F. J., Peifer, D. and Hurst, M. D.: A segmentation approach for the reproducible extraction and quantification of knickpoints from river long profiles, Earth Surface Dynamics, 7(1), 211-230, doi:10.5194/esurf-7-211-2019, 2019.\par
+\years{2019}\hangindent=0.7cm Bernard, T., Sinclair, H. D., Gailleton, B., Mudd, S. M. and Ford, M.: Lithological control on the post-orogenic topography and erosion history of the Pyrenees, Earth and Planetary Science Letters, 518, 53-66, doi:10.1016/j.epsl.2019.04.034, 2019. \textit{Contribution: Ran and analysed sensitivity analysis on the relationship between $k_{sn}$, concavity and lithology; processed and analysed swath profiles to quantify the relationship between elevation and lithology.}\par
+\years{2018}\hangindent=0.7cm Mudd, S. M., Clubb, F. J., Gailleton, B. and Hurst, M. D.: How concave are river channels?, Earth Surface Dynamics, 6(2), 505-523, doi:10.5194/esurf-6-505-2018, 2018. \textit{Contribution: Ran analysis on some test sites and debugged the software. Focused on the relationship between lithology and river concavity.}\par
+
+%\noindentEARTH AND PLANETARY SCIENCE LETTERS
+
+\subsection*{In preparation}
+\years{2020?}\hangindent=0.7cm Sinclair H.D., Gailleton B., Walcott, R.C, Naylor, M., Mudd, S.M.: Drainage capture expands big Himalayan rivers, 2020. \textit{Contribution: Topographic analysis on rivers and drainage divide across the Nepalese Himalayas.}\par
+\years{2020?}\hangindent=0.7cm Gailleton B., Sinclair H.D., Mudd, S. M., Matenco L., Graf E.L.S.: Tectonics from topography in lithologically ambiguous landscapes, 2020.\par
+
+
+\raggedright
+% In review papers. These can be commented out if you want to hide them
+%\years{in review}\hangindent=0.7cm\textbf{39.}
+
+
+% \subsection*{Other Contributions}
+% \noindent
+% \years{2014}\hangindent=0.7cm\textbf{4.} Mudd, S. M., K. Yoo, and B. Weinman (2014), Quantifying geomorphic controls on time in weathering systems, edited by J. Gaillardet, \textit{Geochemistry of the Earth's Surface GES-10}, 10, 249-253, \href{http://dx.doi.org/doi:10.1016/j.proeps.2014.08.033}{doi:10.1016/j.proeps.2014.08.033}.\par
+% \hangindent=0.7cm\textbf{3.} Mudd, S. M. (2014), Slope Processes, \textbf{Oxford Bibliographies}, \href{http://dx.doi.org/doi:10.1093/OBO/9780199874002-0083}{doi:10.1093/OBO/9780199874002-0083}.\par 
+% \years{2011}\hangindent=0.7cm\textbf{2.} Mudd, S. M. (2011), The life and death of salt marshes in response to anthropogenic disturbance of sediment supply, \textit{Geology}, 39(5), 511-512, \href{http://dx.doi.org/doi:10.1130/focus052011.1}{doi:10.1130/focus052011.1}.\par
+% \years{2009}\hangindent=0.7cm\textbf{1.} Yoo, K., B. Weinman, S. M. Mudd, M. Hurst, M. Attal, and K. Maher (2011), Evolution of hillslope soils: The geomorphic theater and the geochemical play, \textit{Applied Geochemistry}, 26, S149-S153, \href{http://dx.doi.org/doi:10.1016/j.apgeochem.2011.03.054}{doi:10.1016/j.apgeochem.2011.03.054}.\par
+
+%\vspace{1cm}
+\vfill{}
+%\hrulefill
+
+
+\end{document}
